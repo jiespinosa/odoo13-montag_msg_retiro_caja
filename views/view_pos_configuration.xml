@@ -1,0 +1,27 @@
+<odoo>
+  <data>
+	<record id="montag_pos_config_inherit" model="ir.ui.view">
+		<field name="name">montag_pos_config.inherit</field>
+		<field name="model">pos.config</field>
+		<field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//div[3]/div[2]" position="after">
+
+				<div class="col-12 col-lg-6 o_setting_box"
+					 title="Cada 4 horas  le aparecerá un mesanje al cajero desde el PDV">
+					<div class="o_setting_left_pane">
+						<field name="segundos_msg"/>
+					</div>
+					<div class="o_setting_right_pane" id="login_with_employees">
+						<span class="o_form_label">Mensaje a Cajeros</span>
+						<div class="text-muted">
+							Indique si se le enviará al cajero cada 4 horas el mensaje de sacar efectivo de caja
+						</div>
+					</div>
+				</div>
+			</xpath>
+	   </field>
+   </record>
+  </data>
+</odoo>
+
